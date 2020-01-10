@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="234877" started-at="2020-01-11T04:02:08 IST" finished-at="2020-01-11T04:06:03 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="234877" started-at="2020-01-11T04:02:08 IST" finished-at="2020-01-11T04:06:03 IST">
+      <class name="com.assignment.vl.tests.EmployeeTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="beforeSuite" is-config="true" duration-ms="107" started-at="2020-01-11T04:02:08 IST" finished-at="2020-01-11T04:02:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="beforeClass" is-config="true" duration-ms="15875" started-at="2020-01-11T04:02:08 IST" finished-at="2020-01-11T04:02:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="beforeMethod" is-config="true" duration-ms="70" started-at="2020-01-11T04:02:24 IST" finished-at="2020-01-11T04:02:24 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.assignment.vl.tests.EmployeeTest.verifyErrorMessagesOnFillingIncompleteForm() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="verifyErrorMessagesOnFillingIncompleteForm()[pri:1, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="verifyErrorMessagesOnFillingIncompleteForm" duration-ms="5444" started-at="2020-01-11T04:02:24 IST" finished-at="2020-01-11T04:02:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorMessagesOnFillingIncompleteForm -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="beforeMethod" is-config="true" duration-ms="107" started-at="2020-01-11T04:02:30 IST" finished-at="2020-01-11T04:02:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.assignment.vl.tests.EmployeeTest.deleteEmployeeAndVerify() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="deleteEmployeeAndVerify()[pri:2, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="deleteEmployeeAndVerify" duration-ms="4352" started-at="2020-01-11T04:02:30 IST" finished-at="2020-01-11T04:02:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEmployeeAndVerify -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="beforeMethod" is-config="true" duration-ms="126" started-at="2020-01-11T04:02:34 IST" finished-at="2020-01-11T04:02:34 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.assignment.vl.tests.EmployeeTest.verifyAdvertisementAppearsAfterEveryTwoEmployeesAdded() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="verifyAdvertisementAppearsAfterEveryTwoEmployeesAdded()[pri:3, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="verifyAdvertisementAppearsAfterEveryTwoEmployeesAdded" duration-ms="61784" started-at="2020-01-11T04:02:34 IST" finished-at="2020-01-11T04:03:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdvertisementAppearsAfterEveryTwoEmployeesAdded -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="beforeMethod" is-config="true" duration-ms="79" started-at="2020-01-11T04:03:36 IST" finished-at="2020-01-11T04:03:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.assignment.vl.tests.EmployeeTest.Add_9_usersInALoopAndDelete_1_2_9_AndDismissAllAds() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Add_9_usersInALoopAndDelete_1_2_9_AndDismissAllAds()[pri:4, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="Add_9_usersInALoopAndDelete_1_2_9_AndDismissAllAds" duration-ms="147007" started-at="2020-01-11T04:03:36 IST" finished-at="2020-01-11T04:06:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_9_usersInALoopAndDelete_1_2_9_AndDismissAllAds -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.assignment.vl.tests.EmployeeTest@cb0ed20]" name="afterSuite" is-config="true" duration-ms="237" started-at="2020-01-11T04:06:03 IST" finished-at="2020-01-11T04:06:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.assignment.vl.tests.EmployeeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
