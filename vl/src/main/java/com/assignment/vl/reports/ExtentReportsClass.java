@@ -27,15 +27,15 @@ public class ExtentReportsClass {
 		try {
 			timeStamp = getCurrentTimeStamp();
 			
-			htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/"+timeStamp+"/RPA_Automation_Report.html");
+			htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+ "/Reports/"+timeStamp+"/Automation_Report.html");
 	       
 			extent.attachReporter(htmlReporter);
 			
-			extent.setSystemInfo("Project", "RPA-Park5 Automation");
+			extent.setSystemInfo("Project", "Automation");
 			extent.setSystemInfo("Test - Machine", System.getProperty("os.name"));
 			
 			htmlReporter.config().setDocumentTitle("Automation Report"); 
-			htmlReporter.config().setReportName("RPA Automation"); 
+			htmlReporter.config().setReportName("Automation"); 
 			htmlReporter.config().setTheme(Theme.DARK);		
 			
 		}catch(Exception e) {

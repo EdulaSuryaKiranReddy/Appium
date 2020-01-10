@@ -3,7 +3,7 @@ package com.assignment.vl.helpers;
 public class ConfigLibrary {
 	
 	public final String DEVICE_NAME = "Samsung Galaxy S8";
-	public final String UDID = "192.168.43.46:5555";
+	public final String UDID = "ce0417146d32ef2804";
 	public final String APP_PACKAGE = "com.aaks.qaautomation";
 	public final String APP_ACTIVITY = "com.aaks.qaautomation.MainActivity";
 	public final String PLATFORM_NAME = "Android";
