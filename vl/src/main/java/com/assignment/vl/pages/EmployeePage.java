@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Set;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
@@ -29,7 +28,7 @@ public class EmployeePage {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), pageObjects);
 	}
 
-	public boolean clickOnAddEmployeeButton() {
+	public boolean clickOnAddEmployeeButton() throws Exception{
 		String failedStep = null;
 		boolean flag = false;
 
@@ -38,14 +37,14 @@ public class EmployeePage {
 			pageObjects.AddEmployeeButton.click();
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
 		return flag;
 	}
 
-	public boolean enterFirstName(String firstName) {
+	public boolean enterFirstName(String firstName) throws Exception {
 		String failedStep = null;
 		boolean flag = false;
 
@@ -54,14 +53,14 @@ public class EmployeePage {
 			pageObjects.FirstNameTextField.sendKeys(firstName);
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
 		return flag;
 	}
 
-	public boolean enterLastName(String lastName) {
+	public boolean enterLastName(String lastName) throws Exception {
 		String failedStep = null;
 		boolean flag = false;
 
@@ -70,14 +69,14 @@ public class EmployeePage {
 			pageObjects.LastNameTextField.sendKeys(lastName);
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
 		return flag;
 	}
 
-	public boolean selectQaTesterJobTitle() {
+	public boolean selectQaTesterJobTitle() throws Exception {
 		String failedStep = null;
 		boolean flag = false;
 
@@ -89,7 +88,7 @@ public class EmployeePage {
 			pageObjects.QaTester.click();
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
@@ -97,7 +96,7 @@ public class EmployeePage {
 	}
 
 
-	public boolean selectProfessionalCurrentProject() {
+	public boolean selectProfessionalCurrentProject() throws Exception {
 		String failedStep = null;
 		boolean flag = false;
 
@@ -109,7 +108,7 @@ public class EmployeePage {
 			pageObjects.ProfessionalText.click();
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
@@ -117,7 +116,7 @@ public class EmployeePage {
 	}
 
 
-	public boolean clickOnCreateEmployee() {
+	public boolean clickOnCreateEmployee() throws Exception {
 		String failedStep = null;
 		boolean flag = false;
 
@@ -126,7 +125,7 @@ public class EmployeePage {
 			pageObjects.CreateEmployeeButton.click();
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
@@ -237,7 +236,7 @@ public class EmployeePage {
 		return flag;
 	}
 
-	public boolean clickOnBackButton() {
+	public boolean clickOnBackButton() throws Exception {
 		String failedStep = null;
 		boolean flag = false;
 
@@ -246,7 +245,7 @@ public class EmployeePage {
 			pageObjects.BackButton.click();
 
 			flag = true;
-		}catch(NoSuchElementException e) {
+		}catch(Exception e) {
 			BaseClass.failedStep = failedStep;
 			throw e;
 		}
