@@ -1,3 +1,10 @@
+/**
+ * This class contains TestNG annotations @BeforeSuite, @BeforeClass 
+ * @BeforeMethod, @AfterSuite.
+ * 
+ * @author SuryaKiran Reddy
+ */
+
 package com.assignment.vl.base;
 
 import java.lang.reflect.Method;
@@ -26,6 +33,12 @@ public class BaseClass {
 	public static String testStep;
 	public static ArrayList<AppiumDriver<MobileElement>> drivers = new ArrayList<AppiumDriver<MobileElement>>();
 	
+	/**
+	 * This method gets executed only once, before the suite gets executed.
+	 * Report is initialised.
+	 * 
+	 * */
+	
 	@BeforeSuite
 	public void beforeSuite() {
 		ExtentReportsClass extentReports = new ExtentReportsClass();
@@ -33,6 +46,12 @@ public class BaseClass {
 
 	}
 
+	/**
+	 * This method gets executed before every test class module.
+	 * Driver is initialised and added to a list.
+	 * 
+	 * */
+	
 	@BeforeClass
 	public void beforeClass() throws Exception{
 
@@ -44,6 +63,13 @@ public class BaseClass {
 		}
 	}
 
+	/**
+	 * This method gets executed before every test case.
+	 * Driver activity is checked before starting the test case.
+	 * If driver is not active the driver is initialised.
+	 * 
+	 * */
+	
 	@BeforeMethod
 	public void beforeMethod(final Method method) throws Exception{
 		logger = extent.createTest(method.getName()).assignCategory(method.getDeclaringClass().getSimpleName()).
@@ -53,6 +79,8 @@ public class BaseClass {
 			
 			if(driver == null) {
 				driver = driverInitialization.setupDriver();
+				drivers.add(driver);
+
 			}else {
 
 				try {
@@ -61,6 +89,8 @@ public class BaseClass {
 				}catch(Exception e) {
 					e.printStackTrace();
 					driver = driverInitialization.setupDriver();
+					drivers.add(driver);
+
 				}
 			}
 		}catch(Exception e) {
@@ -69,6 +99,12 @@ public class BaseClass {
 
 	}
 
+	/**
+	 * This method gets executed only once in an execution.
+	 * Reporting is closed.
+	 * 
+	 * */
+	
 	@AfterSuite
 	public void afterSuite() {
 		extent.flush();

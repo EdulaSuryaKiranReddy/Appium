@@ -1,3 +1,11 @@
+/**
+ * TestNG listeners class to implement OnTestFailure
+ * Executes if a test case gets failed.
+ * captures screenshot on test failure. 
+ * 
+ * @author SuryaKiran Reddy.
+ * */
+
 package com.assignment.vl.listeners;
 
 import java.io.IOException;

@@ -1,3 +1,10 @@
+/**
+ * Class to initialise drivers
+ * Start appium server using java. 
+ * 
+ * @author SuryaKiran Reddy
+ * */
+
 package com.assignment.vl.helpers;
 
 import java.io.File;
@@ -11,7 +18,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.ServerArgument;
 
@@ -26,6 +32,13 @@ public class DriverInitialization {
 		return instance;
 	}
 
+	/**
+	 * Method to initialise the driver.
+	 * Method to start appium server locally
+	 * Starts the appium server for OS type: Mac
+	 * @throws Exception 
+	 * */
+	
 	public AppiumDriver<MobileElement> setupDriver() throws Exception{
 		AppiumDriver<MobileElement> driver = null;
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -70,7 +83,8 @@ public class DriverInitialization {
 
 
 			service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().usingDriverExecutable(node)
-					.withAppiumJS(appium).withArgument(deviceArg, deviceDetails.UDID).
+					.withAppiumJS(appium).
+					//withArgument(deviceArg, deviceDetails.UDID).
 					withArgument(sessionOverride).withIPAddress("127.0.0.1").
 					usingPort(4723));
 
@@ -78,7 +92,7 @@ public class DriverInitialization {
 			Thread.sleep(2000);
 
 			desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceDetails.DEVICE_NAME);
-			desiredCapabilities.setCapability(MobileCapabilityType.UDID, deviceDetails.UDID);
+//			desiredCapabilities.setCapability(MobileCapabilityType.UDID, deviceDetails.UDID);
 			desiredCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 5000);
 			desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 			desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, deviceDetails.APP_PACKAGE);
@@ -88,8 +102,9 @@ public class DriverInitialization {
 			desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 			desiredCapabilities.setCapability(MobileCapabilityType.APP, deviceDetails.APP_PATH);
 
+
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -106,6 +121,11 @@ public class DriverInitialization {
 		}
 	};
 
+	/**
+	 * Session override argument while starting the appium server.
+	 * Over rides old service on the port if running.
+	 * */
+	
 	private ServerArgument sessionOverride = new ServerArgument() {
 		public String getArgument() {
 			return "--session-override";

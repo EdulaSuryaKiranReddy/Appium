@@ -7,7 +7,12 @@ import com.assignment.vl.pages.EmployeePage;
 public class EmployeeTest extends BaseClass{
 	private EmployeePage employeePage;	
 
-	
+	/**
+	 * Step1: Click on create employee button and verify all error messages.
+	 * Step2: Enter employee first name & click on create employee and verify other three error messages.
+	 * 
+	 * */
+
 	@Test(priority = 1)
 	public void verifyErrorMessagesOnFillingIncompleteForm() throws Exception {
 		String testStep;
@@ -24,6 +29,9 @@ public class EmployeeTest extends BaseClass{
 
 		testStep = "Filling the first name";
 		commonHelpers.executeTestStep(commonHelpers.recordTestStep(testStep), getEmployeePageInstance().enterFirstName(FIRST_NAME));
+		
+//		testStep = "Click on back button";
+//		commonHelpers.executeTestStep(commonHelpers.recordTestStep(testStep), getEmployeePageInstance().clickOnBackButton());
 		
 		testStep = "Click on Create Employee Button";
 		commonHelpers.executeTestStep(commonHelpers.recordTestStep(testStep), getEmployeePageInstance().clickOnCreateEmployee());
@@ -43,6 +51,11 @@ public class EmployeeTest extends BaseClass{
 		
 	}
 	
+	/**
+	 * Step1: Delete an employee from the list and verify employee is deleted.
+	 * 
+	 * */
+	
 	@Test(priority = 2)
 	public void deleteEmployeeAndVerify() throws Exception {
 		String testStep;
@@ -51,6 +64,12 @@ public class EmployeeTest extends BaseClass{
 		commonHelpers.executeTestStep(commonHelpers.recordTestStep(testStep), getEmployeePageInstance().deleteEmployeeAndVerify());
 		
 	}
+	
+	/**
+	 * Step1: add 2 employees and verify an advertisement is created.
+	 * For test case robustness delete all the employees & advertisements in the list 
+	 * 
+	 * */
 	
 	@Test(priority = 3)
 	public void verifyAdvertisementAppearsAfterEveryTwoEmployeesAdded() throws Exception {
@@ -66,6 +85,14 @@ public class EmployeeTest extends BaseClass{
 		commonHelpers.executeTestStep(commonHelpers.recordTestStep(testStep), getEmployeePageInstance().addEmployeesAndVerifyAdvertisement());
 			
 	}
+	
+	/**
+	 * Step 1: Add 9 employees in a loop
+	 * Step 2: Delete users 1,2 & 10.
+	 * Step 3: Delete all the advertisements.
+	 * 
+	 * 
+	 * */
 	
 	@Test(priority = 4)
 	public void Add_9_usersInALoopAndDelete_1_2_9_AndDismissAllAds() throws Exception {

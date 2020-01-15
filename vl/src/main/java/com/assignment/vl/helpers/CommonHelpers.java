@@ -1,3 +1,8 @@
+/**
+ * This class contains re-usable methods
+ * 
+ * */
+
 package com.assignment.vl.helpers;
 
 import java.io.File;
@@ -28,6 +33,10 @@ public class CommonHelpers {
 		return instance;
 	}
 
+	/**
+	 * This methods takes a screenshot and copies to the project folder.
+	 * 
+	 * */
 	
 	public String getScreenShot(AppiumDriver<MobileElement> driver) throws IOException {
 		String encodeBase64 = null;
@@ -56,6 +65,12 @@ public class CommonHelpers {
 
 	}
 
+	/**
+	 * A boolean value is returned for every test step execution.
+	 * Based on boolean value the report is logged.
+	 *  
+	 * */
+	
 	public void executeTestStep(String testStepDescription , boolean methodToExecute) {
 
 		try {
@@ -70,6 +85,10 @@ public class CommonHelpers {
 		}
 	}
 
+	/**
+	 * Test step is assigned to the static string variable in base class.
+	 * */
+	
 	public String recordTestStep(String testStep) {
 		BaseClass.testStep = testStep;
 		return testStep;
